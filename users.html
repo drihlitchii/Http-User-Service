@@ -1,0 +1,6 @@
+<h1>{{.PageTitle}}<h1>
+    <ul>
+        {{range $index, $value := .Users }}
+           {{inc $index}} {{.Sname}} {{.Fname}} <p>
+        {{end}}
+    </ul>   
