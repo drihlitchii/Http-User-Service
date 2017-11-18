@@ -116,5 +116,8 @@ func main() {
 	http.HandleFunc("/users", server.UsersHandler)
 	http.Handle("/", http.FileServer(http.Dir("./")))
 
-	http.ListenAndServe(":8080", nil)
+	err = http.ListenAndServe(":8080", nil)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
